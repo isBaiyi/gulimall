@@ -15,3 +15,21 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# 所有子模块下的.gitignore
+**/.gitignore
+# 工程目录下文件
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+# idea配置文件
+.idea
+**/.idea
+# 编译目录
+**/target
+*.iml
+# 热编译工具
+rebel.xml
+jrebel.xml
+**/.rebel.xml
+**/.jrebel.xml
