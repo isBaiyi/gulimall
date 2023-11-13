@@ -20,10 +20,10 @@ import com.baiyi.gulimall.common.utils.PageUtils;
 import com.baiyi.gulimall.common.utils.R;
 
 /**
- * 
+ *
  *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-11 11:11:30
  */
 @RestController

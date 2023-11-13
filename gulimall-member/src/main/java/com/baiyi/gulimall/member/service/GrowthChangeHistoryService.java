@@ -10,7 +10,7 @@ import java.util.Map;
  * 成长值变化历史记录
  *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-11 10:45:10
  */
 public interface GrowthChangeHistoryService extends IService<GrowthChangeHistoryEntity> {

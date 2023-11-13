@@ -9,10 +9,10 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 
- * 
+ *
+ *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-11 11:11:30
  */
 @Data
@@ -21,7 +21,7 @@ public class PurchaseDetailEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
 	@TableId
 	private Long id;

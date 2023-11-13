@@ -5,13 +5,13 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 
- * 
+ *
+ *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-11 11:11:30
  */
 @Mapper
 public interface PurchaseDetailDao extends BaseMapper<PurchaseDetailEntity> {
-	
+
 }

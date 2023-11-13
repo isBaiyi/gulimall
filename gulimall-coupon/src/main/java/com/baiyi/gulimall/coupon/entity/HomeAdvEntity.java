@@ -11,7 +11,7 @@ import lombok.Data;
  * 首页轮播广告
  * 
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-11 10:56:46
  */
 @Data

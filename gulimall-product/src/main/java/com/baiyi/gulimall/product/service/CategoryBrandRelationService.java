@@ -10,7 +10,7 @@ import java.util.Map;
  * 品牌分类关联
  *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-13 15:10:19
  */
 public interface CategoryBrandRelationService extends IService<CategoryBrandRelationEntity> {

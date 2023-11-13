@@ -10,7 +10,7 @@ import java.util.Map;
  * 会员登录记录
  *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-11 10:45:10
  */
 public interface MemberLoginLogService extends IService<MemberLoginLogEntity> {

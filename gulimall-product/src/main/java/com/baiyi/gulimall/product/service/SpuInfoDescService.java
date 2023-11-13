@@ -10,7 +10,7 @@ import java.util.Map;
  * spu信息介绍
  *
  * @author liaozicai
- * @email 1101293873@qq.com
+ * @email starlishcs@gmail.com
  * @date 2023-11-13 15:10:19
  */
 public interface SpuInfoDescService extends IService<SpuInfoDescEntity> {
