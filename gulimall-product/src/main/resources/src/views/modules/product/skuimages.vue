@@ -109,14 +109,14 @@
           url: this.$http.adornUrl('/product/skuimages/list'),
           method: 'get',
           params: this.$http.adornParams({
-            'page': this.pageIndex,
-            'limit': this.pageSize,
+            'pageNo': this.pageIndex,
+            'pageSize': this.pageSize,
             'key': this.dataForm.key
           })
         }).then(({data}) => {
           if (data && data.code === 0) {
-            this.dataList = data.page.list
-            this.totalPage = data.page.totalCount
+            this.dataList = data.page.records
+            this.totalPage = data.page.total
           } else {
             this.dataList = []
             this.totalPage = 0

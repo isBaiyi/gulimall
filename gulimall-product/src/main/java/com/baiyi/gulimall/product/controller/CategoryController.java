@@ -1,23 +1,17 @@
 package com.baiyi.gulimall.product.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Objects;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-
+import com.baiyi.gulimall.common.utils.R;
 import com.baiyi.gulimall.product.entity.CategoryEntity;
 import com.baiyi.gulimall.product.service.CategoryService;
-import com.baiyi.gulimall.common.utils.PageUtils;
-import com.baiyi.gulimall.common.utils.R;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * 商品三级分类
@@ -32,6 +26,28 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
+
+    /**
+     * 查询出所有的分类以及子分类，以树型结构组装起来
+     */
+    @RequestMapping("/list/tree")
+    public R list(){
+        List<CategoryEntity> entities = categoryService.listWithTree();
+        return R.ok().put("data", entities);
+    }
+
+    /**
+     * 批量修改分类
+     *
+     * @param category 分类数组
+     * @return 修改结果
+     */
+    @PostMapping("/update/sort")
+    public R updateSort(@RequestBody CategoryEntity[] category) {
+        categoryService.updateBatchById(Arrays.asList(category));
+        return R.ok();
+    }
+
 
     /**
      * 列表
@@ -86,8 +102,8 @@ public class CategoryController {
     @RequestMapping("/delete")
     // @RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
-
+        // 检查当前删除的菜单，是否被别的地方引用
+        categoryService.removeMenuByIds(Arrays.asList(catIds));
         return R.ok();
     }
 
