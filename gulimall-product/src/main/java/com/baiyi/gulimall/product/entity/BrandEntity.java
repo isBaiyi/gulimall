@@ -59,7 +59,7 @@ public class BrandEntity implements Serializable {
 	 * 检索首字母
 	 */
 	@NotBlank(message = "检索首字母不能为空")
-	@Pattern(regexp = "^[a-zA-Z]$", groups = {AddGroup.class, UpdateGroup.class})
+	@Pattern(regexp = "^[a-zA-Z]$", message = "只能是a-z或者A-Z的字符", groups = {AddGroup.class, UpdateGroup.class})
 	private String firstLetter;
 	/**
 	 * 排序
